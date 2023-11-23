@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 06 Forms</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Login</legend>
+
+        <section>
+          <label for="userEmail">E-mail:</label>
+          <input
+            type="email"
+            name="userEmail"
+            id="userEmail"
+            placeholder="Digite seu melhor email"
+            required
+          />
+        </section>
+        <br />
+
+        <section>
+          <label for="userPassword">Senha:</label>
+          <input
+            type="passWord"
+            name="userPassword"
+            id="userPassword"
+            placeholder="Digite sua senha"
+            required
+            minlength="5"
+          />
+        </section>
+
+        <br />
+        <button type="submit">Logar</button>
+      </fieldset>
+    </form>
+
+    <form>
+      <input
+        type="number"
+        name="userAge"
+        placeholder="Digite sua idade"
+        inputmode="numeric"
+        min="16"
+        minlength="2"
+        max="75"
+      />
+      <br />
+      <br />
+      <input type="date" value="2006-04-23" name="born" />
+      <br />
+      <br />
+      <input
+        type="range"
+        min="0 "
+        max="100"
+        name="volume"
+        value="70"
+        step="20"
+      />
+      <br /><br />
+
+      <input type="file" accept="image/*" />
+      <!-- accept: ".doc"; ".pdf"; ".svg"; "image/*" "audio/*"; "video/*"  -->
+      <br /><br />
+
+      <input type="color" name="favoriteColor" />
+      <br /><br />
+      <section>
+        <input type="checkbox" id="audio" name="audio" />
+        <label for="audio">Audio</label>
+      </section>
+
+      <section>
+        <input type="checkbox" id="video" name="video" />
+        <label for="video">Video</label>
+      </section>
+
+      <section>
+        <input type="checkbox" id="image" name="image" />
+        <label for="image">Image</label>
+      </section>
+      <br /><br />
+      <section>
+        <input type="radio" id="yes" name="term" value="accept" />
+        <label for="yes">Sim</label>
+      </section>
+      <br /><br />
+      <section>
+        <input type="radio" id="no" name="term" value="noAceppt" />
+        <label for="no">Não</label>
+      </section>
+      <br /><br />
+      <select name="students" id="students" multiple>
+        <option value="Emanuel Quintino">as3324123</option>
+        <option value="Adriana">Adriana</option>
+        <option value="Natanael">Natanael</option>
+        <option value="Natanael">Natanael</option>
+        <option value="Natanael">Natanael</option>
+        <option value="Natanael">Natanael</option>
+      </select>
+      <br /><br />
+
+      <textarea
+        name="observations"
+        id=""
+        cols="30"
+        rows="10"
+        maxlength="400"
+        placeholder="digite suas observações"
+      ></textarea>
+
+      <br />
+      <br />
+      <button>Enviar</button>
+    </form>
+  </body>
+</html>

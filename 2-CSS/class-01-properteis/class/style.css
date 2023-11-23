@@ -1,0 +1,74 @@
+@font-face {
+  font-family: Avenceance ;
+  src: url(/2-CSS/AVENGEANCE\ HEROIC\ AVENGER\ AT.ttf);
+}
+body{
+  background:lightgrey;
+  background-image: url(../../../1-HTML/class-03-medias/challenges/images/img-1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+
+h1 {
+  color: #49d61e;
+  background: #223573;
+  border: 2px solid #0027A6;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 48px;
+  font-family:"stylesheet";
+
+}
+
+h1 {
+  color: peru;
+}
+
+h1 {
+  color: red;
+}
+
+#subTitle2 {
+  color: blue;
+  font-family: Avenceance;
+}
+
+h2 {
+  color: red;
+}
+
+p {
+  color: red;
+}
+
+p.paragraph {
+  color: black;
+  font-weight: 700;
+  font-weight: bolder;
+  font-style: oblique;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  line-height: 120%;
+  text-transform: capitalize;
+  /* margin-top: 92px; */
+  text-decoration: line-through black;
+
+  /* text-decoration: dotted underline black; */
+}
+
+.paragraph {
+  color: teal;
+}
+
+section h2 {
+  font-size: 50px;
+  text-shadow: 1px 1px 1px black;
+}
+
+h2 {
+  font-size: 50px;
+}

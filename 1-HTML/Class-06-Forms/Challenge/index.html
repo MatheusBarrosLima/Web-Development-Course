@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Forms</title>
+    <style>
+      body {
+        background: #e5e5e5;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      main {
+        width: 350px;
+        margin: auto;
+        background: #fafafc;
+        padding: 16px;
+        border-radius: 8px;
+      }
+
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Alunos</h1>
+    </header>
+
+    <main>
+      <form enctype="multipart/form-data">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <section>
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              placeholder="Digite seu nome completo"
+              id="name"
+              autofocus
+              name="name"
+            />
+          </section>
+
+          <br />
+
+          <section>
+            <label for="birth">Nascimento:</label>
+            <input type="date" id="birth" name="birth" />
+          </section>
+
+          <br />
+
+          <section>
+            <label for="RG">RG:</label>
+            <input
+              type="text"
+              id="RG"
+              name="RG"
+              minlength="8"
+              maxlength="11"
+              placeholder="Digite seu RG com 8 ou 11 números"
+            />
+          </section>
+
+          <br />
+
+          <section>
+            <label for="CPF">CPF:</label>
+            <input
+              type="text"
+              id="CPF"
+              name="CPF"
+              minlength="11"
+              maxlength="11"
+              placeholder="Digite seu CPF com 11 números"
+            />
+          </section>
+
+          <br />
+
+          <section>
+            <label for="masculine">Masculino</label>
+            <input type="radio" id="masculine" name="sexo" value="M" />
+
+            <label for="feminine">Feminino</label>
+            <input type="radio" id="feminine" name="sexo" value="F" />
+          </section>
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>Linguagens de Domínio</legend>
+
+          <section>
+            <input type="checkbox" id="html" name="html" />
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="css" />
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript" name="javascript" />
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="sql" name="sql" />
+            <label for="sql">SQL</label>
+          </section>
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>Dados de Login</legend>
+
+          <section>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" />
+          </section>
+
+          <br />
+
+          <section>
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Mínimo de 8 caracteres"
+              minlength="8"
+            />
+          </section>
+
+          <br>
+
+          <section>
+            <label for="photo">Foto:</label>
+            <input type="file" id="photo" name="photo" accept="image/*"/>
+          </section>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend>Observações</legend>
+          <section>
+            <label for="observation" hidden>Observação</label>
+            <textarea 
+              name="observation" 
+              id="observation" 
+              cols="41" 
+              rows="10"
+              maxlength="370"
+              placeholder="Faça suas observações"
+            ></textarea>
+          </section>
+        </fieldset>
+
+        <br />
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </form>
+    </main>
+  </body>
+</html>
