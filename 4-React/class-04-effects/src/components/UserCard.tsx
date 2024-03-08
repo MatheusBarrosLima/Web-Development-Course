@@ -1,19 +1,15 @@
-type Data = {
-    avatar_url: string;
+export type PropsUserData = {
     name: string;
+    avatar_url: string;
     bio: string;
 };
 
-type Props = {
-    data: Data
-}
-
-export function UserCard({ data }: Props ) {
+export function UserCard({ name, avatar_url, bio }: PropsUserData ) {
     return (
         <div style={{ textAlign: "center"}}>
-        <img src={data.avatar_url} alt="user_image" width={200} />
-        <h2>{data.name}</h2>
-        <p>{data.bio}</p>
+        <img src={avatar_url} alt="user-image" width={200} />
+        <h2>{name}</h2>
+        <p>{bio}</p>
       </div>
     )
 }

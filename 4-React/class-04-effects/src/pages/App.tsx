@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { UserCard } from "../components/UserCard";
+import { PropsUserData, UserCard } from "../components/UserCard";
 
 export function App() {
   const [count, setCount] = useState(0)
   const [count2, setCount2] = useState(0)
-  const [dataUser, setDatauser] = useState([])
+  const [dataUser, setDatauser] = useState({} as PropsUserData);
 
   useEffect(() => {
     console.log(`Effect ${count}`);// component DidMount
@@ -29,7 +29,11 @@ export function App() {
       <p>Count2: {count2}</p>
       <button onClick={() => setCount((value) => value +1)}>Add</button>
       
-      <UserCard data={dataUser}/>
+      <UserCard 
+        avatar_url={dataUser.avatar_url}
+        name={dataUser.name}
+        bio={dataUser.bio}
+      />
     </>
   );
 }
