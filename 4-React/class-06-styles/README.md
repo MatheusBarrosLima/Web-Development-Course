@@ -1,8 +1,11 @@
 # Class 06 Styles
 
-- CSS
+# Css in JS
 - Preprocessors
 - Minification
 - Style Collisions
-- Css in JS
-- Styled Components
+
+## Styled Components
+- styled (tags and css)
+- createGlobalStyle (reset)
+- DefaultTheme (types)
