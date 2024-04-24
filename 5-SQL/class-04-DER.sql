@@ -34,3 +34,53 @@ CREATE TABLE IF NOT EXISTS sales(
      FOREIGN KEY (id_client) REFERENCES clients(id) ON DELETE CASCADE,
      FOREIGN KEY (id_product) REFERENCES products(id)
 );
+SELECT * FROM clients;
+INSERT INTO clients(name, cpf) VALUES
+('Matheus', '000.000.000-01'),
+('Pablo', '000.000.000-02'),
+('Ant Carlos', '000.000.000-03');
+
+SELECT * FROM phones;
+INSERT INTO phones(number, id_client) VALUES
+('(88) 90000-0001',1),
+('(88) 90000-0002',1),
+('(88) 90000-0003',2),
+('(88) 90000-0004',3);
+
+SELECT * FROM products;
+INSERT INTO products (name, price) VALUES
+('Gabinite', 350),
+('RAM 16GB', 200),
+('SSD 512GB', 350),
+('Processador i7 12000', 1200),
+('GTX 2080', 1600),
+('Monitor', 1000),
+('Cadeira', 1500),
+('Mouse', 200),
+('Teclado', 200);
+
+SELECT * FROM sales;
+INSERT INTO sales (id_client, id_product, amount) VALUES
+(1, 3, 1),
+(1, 2, 2),
+(1, 5, 1),
+(2, 5, 1),
+(2, 6, 1);
+
+
+SELECT clients.name, phones.number 
+FROM clients INNER JOIN phones
+ON clients.id == phones.id_client;
+
+SELECT
+    clients.name,
+    products.name AS product,
+    sales.amount,
+    products.price,
+    sales.amount * products.price AS total
+
+    
+FROM clients
+INNER JOIN sales ON sales.id_client == clients.id
+INNER JOIN products ON sales.id_product == products.id
+WHERE clients.id = 1
