@@ -3,10 +3,10 @@ import path from "path";
 import crypto from "node:crypto";
 import { Request } from "express";
 
-export const UPLOADS_FOLDERS = path.resolve(__dirname, "..", "uploads");
+export const UPLOADS_FOLDER = path.resolve(__dirname, "..", "uploads");
 
 const storage = multer.diskStorage({
-  destination: UPLOADS_FOLDERS,
+  destination: UPLOADS_FOLDER,
   filename(_req, file, callback) {
     const hash = crypto.randomBytes(10).toString("hex");
     const filename = `${hash}-${file.originalname};`;
